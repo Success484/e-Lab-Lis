@@ -242,8 +242,10 @@
             </ul>
 
             <div class="dashboard-table">
+              <div class="dashboard-table-div">
+                <div>
               <p>Prescribed Drugs</p>
-              <table border="1">
+              <table border="1" class="table-1">
                 <thead>
                   <tr>
                     <th>S/N</th>
@@ -254,9 +256,9 @@
                     <th>Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-1-tbody">
                   <tr>
-                    <td>1</td>
+                    <td class="first-td">1</td>
                     <td>
                       <section>
                         <p>Tab Emzor Paracetamol  250mg</p>
@@ -269,7 +271,7 @@
                     <td class="remove-cell"><p class="remove">Remove</p></td>
                   </tr>
                   <tr>
-                    <td>2</td>
+                    <td class="first-td">2</td>
                     <td>
                       <section>
                         <p>Tab Emzor Paracetamol  250mg</p>
@@ -295,7 +297,41 @@
                     <td class="remove-cell"><p class="remove">Remove</p></td>
                   </tr>
                 </tbody>
-              </table>              
+              </table> 
+                </div>             
+            </div>
+            <div>
+              <form action="" class="table-form">
+                <div>
+                  <label for="input1">Search Medicine brand</label>
+                  <input type="text" name="input1" placeholder="search medicine brand">
+                  <div class="medicine-brand">
+                    <section><br>
+                      <p>Emzor Paracetamol Tab 250mg  </p>
+                      <p class="sachet">(10 sachet left)</p>
+                    </section>
+                    <section>
+                      <p>Paracetamol</p>
+                      <p class="sachet">(5 bottles left)</p>
+                    </section>
+                  </div>
+                </div>
+                <div>
+                  <label for="input2">Interval</label>
+                  <input type="text" name="input2" placeholder="Enter  interval">
+                </div>
+                <div>
+                  <label for="input3">Special Instruction</label>
+                  <input type="text" name="input3" placeholder="enter instruction">
+                </div>
+                <div>
+                  <label for="input4">Duration</label>
+                  <input type="text" name="input4" placeholder="enter duration">
+                </div>
+                <button>Add</button>
+              </form>
+              
+            
             </div>
           </div>
           <div class="dashboard-bottom">
@@ -310,4 +346,6 @@
     </div>
   </body>
 </html>
+
+
 

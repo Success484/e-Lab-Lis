@@ -9,8 +9,10 @@
   justify-content: space-between;
   box-shadow: #5b5b5b;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  height: 136px;
-  padding: 0 25px 0 25px;
+  height: 90px;
+  /* padding: 0 25px 0 25px; */
+  width: 1423px;
+
 }
 
 .hamburger {
@@ -29,7 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 35px 0 30px;
+  padding: 0 30px 0 30px;
   cursor: pointer;
 }
 
@@ -76,7 +78,7 @@
 /* NAVBAR ENDS */
 .body-section {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .side-nav {
@@ -84,11 +86,11 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
-  width: 100px;
+  width: 90px;
   color: #5b5b5b;
   line-height: 30.47px;
   padding: 0;
-  padding-top: 25px;
+  /* padding-top: 25px; */
   margin-right: 20px;
   box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
@@ -96,6 +98,7 @@
   overflow-x: hidden;
   background-color: #ffffff;
   transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  padding-top: 20px;
 }
 
 .side {
@@ -119,7 +122,7 @@
   font-size: 26px;
   list-style: none;
   display: flex;
-  padding: 20px 50px 15px 25px;
+  padding: 0 50px 25px 25px;
   width: 347px;
   justify-content: space-between;
   align-items: center;
@@ -145,6 +148,7 @@
 }
 
 .full-dashboard {
+  /* width: 1028px; */
   width: 100%;
   height: 620px;
   box-shadow: -1px 0px 6px 5px #e5e5e5;
@@ -210,6 +214,7 @@
   text-align: center;
   align-items: center;
   padding: 8px 8px;
+  margin-top: 30px;
 }
 
 /* End of Dashboard Body */
@@ -472,7 +477,7 @@
 .inside-dashboard ul {
   display: flex;
   gap: 1px;
-  padding: 50px 0 50px 20px;
+  padding: 40px 20px 40px 20px;
 }
 
 .inside-dashboard ul li {
@@ -488,8 +493,8 @@
   font-weight: 700;
 }
 
-table {
-  width: 100%;
+.table-1 {
+  width: 991px;
   height: 144px;
   border-collapse: collapse; 
   color: #5B5B5B;
@@ -498,12 +503,12 @@ table {
       sans-serif;
 }
 
-tbody {
+.table-1-tbody {
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
 }
 
 th {
-  padding: 8px; 
+  padding: 5px; 
   text-align: left; 
   background-color: #F3F2F2;
   border: 2px solid #E5E5E5;
@@ -512,8 +517,8 @@ th {
   line-height: 16px;
 }
 
-td {
-  padding: 5px;
+tbody tr td {
+  padding: 1px;
   border: 2px solid #E5E5E5;
   font-size: 12px;
   font-weight: 500;
@@ -528,6 +533,12 @@ td {
   text-align: center;
   border-radius: 8px;
   margin-bottom: 2px;
+  position: relative;
+  bottom: 4px;
+}
+
+.first-td {
+  text-align: center;
 }
 
 td p.remove {
@@ -543,6 +554,7 @@ td p.remove {
   width: 70px;
   color: white;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 td.remove-cell {
@@ -561,6 +573,100 @@ td.remove-cell {
   padding-bottom: 8px;
 }
 
-.inside-dashboard .dashboard-table{
-  margin: 0 30px 0 30px;
+.inside-dashboard .dashboard-table .dashboard-table-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* dashboard form */
+.table-form{
+  /* width: 100%; */
+  padding: 0 0 0 20px;
+  margin-top: 80px;
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form button {
+  background-color: #9c3030;
+  color: white;
+  border: none;
+  width: 46px;
+  height: 28px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 900;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+form div label {
+  color: #5B5B5B;
+  line-height: 14px;
+  font-weight: 900;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+}
+
+
+form div input {
+  height: 33px;
+  /* width: 15vi; */
+  width: 300px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: 1px solid #FFFBFB;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5B5B5B;
+  margin-top: 1px;
+}
+
+.table-form div:nth-child(2) input {
+  width: 243px;
+}
+
+.table-form div:nth-child(3) input {
+  width: 272px;
+}
+
+.table-form div:nth-child(4) input {
+  width: 105px;
+}
+
+
+.medicine-brand{
+  padding-left: 10px;
+  font-size: 12px;
+  box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
+  /* width: 15vi; */
+  width: 300px;
+  height: 107px;
+  margin-top: 4px;
+  color: #5B5B5B;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+}
+
+.sachet {
+  font-size: 12px;
+  color: #8F8989;
+  position: relative;
+  bottom: 8px;
+}
+
+.medicine-brand section {
+  padding-top: -8px;
 }

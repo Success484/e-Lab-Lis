@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 1440;
 }
 /* NAVBAR START */
 .navbar {
@@ -10,8 +11,9 @@
   box-shadow: #5b5b5b;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   height: 90px;
-  /* padding: 0 25px 0 25px; */
-  width: 1423px;
+  padding: 0 25px 0 25px;
+  /* width: 100%; */
+  width: 1440px;
 
 }
 
@@ -90,7 +92,6 @@
   color: #5b5b5b;
   line-height: 30.47px;
   padding: 0;
-  /* padding-top: 25px; */
   margin-right: 20px;
   box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
@@ -116,13 +117,14 @@
   margin-right: 20px;
   background-color: #ffffff;
   opacity: 1;
+  padding-top: 35px;
 }
 
 .side-nav li {
   font-size: 26px;
   list-style: none;
   display: flex;
-  padding: 0 50px 25px 25px;
+  padding: 0 50px 28px 25px;
   width: 347px;
   justify-content: space-between;
   align-items: center;
@@ -156,6 +158,11 @@
 }
 
 /* Dashboad Body */
+
+.body-section {
+  width: 1440px;
+}
+
 .dashboad-body {
   display: flex;
   color: #5b5b5b;
@@ -213,13 +220,256 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding: 8px 8px;
-  margin-top: 30px;
+  padding: 8px 3px;
+  margin-top: 10px;
 }
 
 /* End of Dashboard Body */
 
 /* media query */
+/* .table-form div:nth-child(2) input {
+  width: 243px;
+}
+  
+  .table-form div:nth-child(3) input {
+    width: 272px;
+  }
+  
+  .table-form div:nth-child(4) input {
+    width: 105px;
+  } */
+  
+
+/* inside dashboard */
+
+.inside-dashboard ul {
+  display: flex;
+  gap: 1px;
+  padding: 40px 20px 40px 20px;
+}
+
+.inside-dashboard ul li:nth-child(1) {
+  color: #9c3030;
+  background-color: white;
+  border: 1px solid #9c3030;
+}
+
+.inside-dashboard ul li {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  background-color: #9c3030;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 14.06px;
+  list-style: none;
+  font-weight: 700;
+}
+
+.table-1 {
+  width: 100%;
+  height: 144px;
+  border-collapse: collapse; 
+  color: #5B5B5B;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+}
+
+.table-1-tbody {
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
+}
+
+th {
+  padding: 5px 0 5px 10px; 
+  text-align: left; 
+  background-color: #F3F2F2;
+  border: 2px solid #E5E5E5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+tbody tr td {
+  padding: 1px 0 1px 15px;
+  border: 2px solid #E5E5E5;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.Arthemeter{
+  background-color: #8F8989;
+  color: white;
+  height: 20px;
+  width: 85px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  position: relative;
+  bottom: 4px;
+}
+
+.first-td {
+  padding: 0;
+  text-align: center;
+}
+
+td p.remove {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9c3030;
+  width: 70px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+td.remove-cell {
+  width: 70px;
+  padding: 0 20px 0 20px;
+}
+
+
+.dashboard-table p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  padding-bottom: 8px;
+}
+
+.inside-dashboard .dashboard-table .dashboard-table-div {
+  padding: 0 20px;
+}
+
+
+/* dashboard form */
+
+form {
+  display: flex;
+  gap: 5px;
+  padding: 0 20px 0 20px;
+  margin-top: 80px;
+}
+
+form button {
+  background-color: #9c3030;
+  color: white;
+  border: none;
+  width: 46px;
+  height: 28px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 900;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+  /* margin-right: 50px; */
+}
+
+form div label {
+  color: #5B5B5B;
+  line-height: 14px;
+  font-weight: 900;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+}
+
+
+form div input {
+  height: 33px;
+  /* width: 15vi; */
+  width: 300px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: 1px solid #FFFBFB;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5B5B5B;
+  margin-top: 1px;
+}
+
+.table-form div:nth-child(2) input {
+  width: 243px;
+}
+
+.table-form div:nth-child(3) input {
+  width: 272px;
+}
+
+.table-form div:nth-child(4) input {
+  width: 105px;
+}
+
+
+.medicine-brand{
+  padding-left: 10px;
+  font-size: 12px;
+  box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
+  /* width: 15vi; */
+  width: 300px;
+  height: 107px;
+  margin-top: 4px;
+  color: #5B5B5B;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+}
+
+.sachet {
+  font-size: 12px;
+  color: #8F8989;
+  position: relative;
+  bottom: 8px;
+}
+
+.medicine-brand section {
+  padding-top: -8px;
+}
+
+.container {
+  background-color: #9c3030;
+  padding: 8px 0;
+  width: 105px;
+  text-align: center;
+  margin: 30px 20px 0 20px;
+  border-radius: 8px;
+  /* padding-top: 20px; */
+
+}
+
+.next-link {
+  color: white;
+  /* text-align: center; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+  sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.next-link span {
+  position: relative;
+  bottom: 3px;
+  padding-right: 6px;
+}
+
 @media (min-width: 567px) and (max-width: 1221px) {
   .head {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -298,7 +548,13 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     height: 80px;
     padding: 0 25px 0 25px;
+    width: 100%;
   }
+
+  .body-section {
+    width: 100%;
+  }
+  
   .side-nav li > i.fa-arrow-down {
     padding-right: 15px;
   }
@@ -315,8 +571,9 @@
   }
   .side-nav {
     width: 80px;
-    max-width: 80px;
+    max-width: 10px;
     /* min-width: 80px; */
+    padding-left: 20px;
     transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
@@ -329,7 +586,34 @@
     color: #5b5b5b;
     line-height: 21px;
   }
+
+  form {
+    display: flex;
+    gap: 5px;
+    padding: 0 20px 0 20px;
+    margin-top: 80px;
+  }
+
+  .table-form div:nth-child(1) input {
+    width: 100%;
+  }
+
+  .table-form div:nth-child(2) input {
+    width: 100%;
+  }
+  
+  .table-form div:nth-child(3) input {
+    width: 100%;
+  }
+  
+  .table-form div:nth-child(4) input {
+    width: 100%;
+  }
+
+
 }
+
+
 @media (max-width: 789px) {
   .head {
     display: none;
@@ -343,7 +627,7 @@
     font-size: 16px;
     list-style: none;
     display: flex;
-    padding: 10px 50px 15px 12px;
+    padding: 10px 50px 15px 20px;
     width: 347px;
     min-width: 347px;
     max-width: 347px;
@@ -418,7 +702,13 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     height: 60px;
     padding: 0;
+    width: 100%;
   }
+
+  .body-section {
+    width: 100%;
+  }
+
   .info-icon {
     display: flex;
     align-items: center;
@@ -426,7 +716,6 @@
     padding-left: 10px;
   }
   .dashboad-body {
-    /* height: 709px; */
     width: 100%;
     display: flex;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -470,203 +759,38 @@
     padding: 6px;
     text-align: center;
   }
-}
 
-/* inside dashboard */
+  form div input {
+    height: 33px;
+    width: 100%;
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid #FFFBFB;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #5B5B5B;
+    margin-top: 1px;
+  }
+  
+  .table-form div:nth-child(2) input {
+    width: 100%;
+  }
+  
+  .table-form div:nth-child(3) input {
+    width: 100%;
+  }
+  
+  .table-form div:nth-child(4) input {
+    width: 100%;
+  }
 
-.inside-dashboard ul {
-  display: flex;
-  gap: 1px;
-  padding: 40px 20px 40px 20px;
-}
+  form {
+    display: flex;
+    gap: 5px;
+    padding: 0 20px 0 20px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+  }
 
-.inside-dashboard ul li {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-  background-color: #9c3030;
-  color: white;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 14.06px;
-  list-style: none;
-  font-weight: 700;
-}
-
-.table-1 {
-  width: 991px;
-  height: 144px;
-  border-collapse: collapse; 
-  color: #5B5B5B;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-}
-
-.table-1-tbody {
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
-}
-
-th {
-  padding: 5px; 
-  text-align: left; 
-  background-color: #F3F2F2;
-  border: 2px solid #E5E5E5;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-}
-
-tbody tr td {
-  padding: 1px;
-  border: 2px solid #E5E5E5;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
-}
-
-.Arthemeter{
-  background-color: #8F8989;
-  color: white;
-  height: 20px;
-  width: 85px;
-  text-align: center;
-  border-radius: 8px;
-  margin-bottom: 2px;
-  position: relative;
-  bottom: 4px;
-}
-
-.first-td {
-  text-align: center;
-}
-
-td p.remove {
-  text-align: center;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9c3030;
-  width: 70px;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-td.remove-cell {
-  width: 70px;
-  padding: 0 20px 0 20px;
-}
-
-
-.dashboard-table p {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16.41px;
-  padding-bottom: 8px;
-}
-
-.inside-dashboard .dashboard-table .dashboard-table-div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* dashboard form */
-.table-form{
-  /* width: 100%; */
-  padding: 0 0 0 20px;
-  margin-top: 80px;
-}
-
-form {
-  display: flex;
-  gap: 5px;
-}
-
-form button {
-  background-color: #9c3030;
-  color: white;
-  border: none;
-  width: 46px;
-  height: 28px;
-  line-height: 16px;
-  font-size: 14px;
-  font-weight: 900;
-  padding: 8px 10px;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 20px;
-  margin-right: 50px;
-}
-
-form div label {
-  color: #5B5B5B;
-  line-height: 14px;
-  font-weight: 900;
-  font-size: 12px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-}
-
-
-form div input {
-  height: 33px;
-  /* width: 15vi; */
-  width: 300px;
-  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-  border: 1px solid #FFFBFB;
-  padding-left: 10px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #5B5B5B;
-  margin-top: 1px;
-}
-
-.table-form div:nth-child(2) input {
-  width: 243px;
-}
-
-.table-form div:nth-child(3) input {
-  width: 272px;
-}
-
-.table-form div:nth-child(4) input {
-  width: 105px;
-}
-
-
-.medicine-brand{
-  padding-left: 10px;
-  font-size: 12px;
-  box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
-  /* width: 15vi; */
-  width: 300px;
-  height: 107px;
-  margin-top: 4px;
-  color: #5B5B5B;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-}
-
-.sachet {
-  font-size: 12px;
-  color: #8F8989;
-  position: relative;
-  bottom: 8px;
-}
-
-.medicine-brand section {
-  padding-top: -8px;
 }

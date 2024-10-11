@@ -79,7 +79,7 @@
 /* NAVBAR ENDS */
 .body-section {
   display: flex;
-  /* width: 100%; */
+  width: 1440px;
 }
 
 .side-nav {
@@ -143,9 +143,9 @@
   color: #9c3030;
 }
 
-.side-nav li.active > i.fa-arrow-down {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
+.side-nav li.active > i::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f062";
 }
 
 .full-dashboard {
@@ -157,9 +157,9 @@
 
 /* Dashboad Body */
 
-.body-section {
+/* .body-section {
   width: 1440px;
-}
+} */
 
 .full-dashboard .full-dashboard-div {
   display: flex;
@@ -262,7 +262,7 @@
 }
 
 .table-responsive {
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 .table-1-tbody {
@@ -347,7 +347,6 @@ form {
   padding: 0 20px 0 20px;
   margin-top: 80px;
 }
-
 
 .button-div {
   background-color: #9c3030;
@@ -539,6 +538,7 @@ form div input {
 
   .body-section {
     width: 100%;
+    overflow-x: scroll;
   }
 
   .full-dashboard {
@@ -699,6 +699,7 @@ form div input {
 
   .body-section {
     width: 100%;
+    overflow-x: scroll;
   }
 
   .full-dashboard {

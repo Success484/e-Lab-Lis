@@ -225,25 +225,13 @@
 
 /* End of Dashboard Body */
 
-/* media query */
-/* .table-form div:nth-child(2) input {
-  width: 243px;
-}
-  
-  .table-form div:nth-child(3) input {
-    width: 272px;
-  }
-  
-  .table-form div:nth-child(4) input {
-    width: 105px;
-  } */
-
 /* inside dashboard */
 
 .inside-dashboard ul {
   display: flex;
   gap: 1px;
   padding: 40px 20px 40px 20px;
+  flex-wrap: wrap;
 }
 
 .inside-dashboard ul li:nth-child(1) {
@@ -359,20 +347,27 @@ form {
   margin-top: 80px;
 }
 
-form button {
+.button-div {
   background-color: #9c3030;
-  color: white;
   border: none;
   width: 46px;
-  height: 28px;
+  height: 30px;
   line-height: 16px;
-  font-size: 14px;
-  font-weight: 900;
   padding: 8px 10px;
   border-radius: 8px;
   text-align: center;
   margin-top: 20px;
-  /* margin-right: 50px; */
+}
+
+form button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 900;
+  color: white;
+  position: relative;
+  bottom: 3px;
+  right: 2px;
 }
 
 form div label {
@@ -386,8 +381,6 @@ form div label {
 
 form div input {
   height: 33px;
-  /* width: 15vi; */
-  width: 300px;
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   border: 1px solid #fffbfb;
@@ -396,6 +389,10 @@ form div input {
   font-weight: 500;
   color: #5b5b5b;
   margin-top: 1px;
+}
+
+.table-form div:nth-child(1) input {
+  width: 100%;
 }
 
 .table-form div:nth-child(2) input {
@@ -414,7 +411,7 @@ form div input {
   padding-left: 10px;
   font-size: 12px;
   box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
-  /* width: 15vi; */
+  width: 100%;
   width: 300px;
   height: 107px;
   margin-top: 4px;
@@ -446,7 +443,6 @@ form div input {
 
 .next-link {
   color: white;
-  /* text-align: center; */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
@@ -514,6 +510,10 @@ form div input {
     line-height: 42.19px;
   }
 
+  .info-icon-name + i.fa-arrow-down {
+    font-size: 17px;
+  }
+
   .dashboad-body ul:nth-of-type(1) {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -546,6 +546,10 @@ form div input {
     width: 100%;
   }
 
+  .full-dashboard {
+    height: 100%;
+  }
+
   .side-nav li > i.fa-arrow-down {
     padding-right: 15px;
   }
@@ -553,7 +557,7 @@ form div input {
   .side-nav li {
     list-style: none;
     display: flex;
-    padding: 20px 50px 15px 12px;
+    padding: 20px 50px 15px 20px;
     width: 347px;
     min-width: 347px;
     max-width: 347px;
@@ -561,11 +565,8 @@ form div input {
     align-items: center;
   }
   .side-nav {
-    width: 80px;
-    max-width: 10px;
-    /* min-width: 80px; */
-    padding-left: 20px;
-    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    width: 0;
+    margin: 20px 0 0 0;
   }
 
   .dashboard-bottom p {
@@ -578,8 +579,9 @@ form div input {
     line-height: 21px;
   }
 
-  .table {
+  .table-1 {
     height: 144px;
+    width: 100%;
     border-collapse: collapse;
     color: #5b5b5b;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -587,11 +589,17 @@ form div input {
       sans-serif;
   }
 
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
   form {
     display: flex;
     gap: 5px;
     padding: 0 20px 0 20px;
     margin-top: 80px;
+    flex-wrap: wrap;
   }
 
   .table-form div:nth-child(1) input {
@@ -643,6 +651,7 @@ form div input {
     gap: 6px;
     padding: 0 0 0 15px;
     cursor: pointer;
+    height: 20px;
   }
   .hamburger {
     width: 25px;
@@ -678,6 +687,11 @@ form div input {
     color: #5b5b5b;
     line-height: 42.19px;
   }
+
+  .info-icon-name + i.fa-arrow-down {
+    font-size: 10px;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -781,9 +795,6 @@ form div input {
     padding: 0 20px 0 20px;
     margin-top: 80px;
     flex-wrap: wrap;
-  }
-
-  .table-div {
   }
 
   tbody tr td {

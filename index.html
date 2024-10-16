@@ -13,7 +13,7 @@
       src="https://kit.fontawesome.com/6f961eaa51.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <div>
@@ -277,18 +277,14 @@
               <form action="" class="table-form">
                 <div>
                   <label for="input1">Search Medicine brand</label>
-                  <input type="text" name="input1" placeholder="search medicine brand">
-                  <div class="medicine-brand">
-                    <section><br>
-                      <p>Emzor Paracetamol Tab 250mg</p>
-                      <p class="sachet">(10 sachet left)</p>
-                    </section>
-                    <section>
-                      <p>Paracetamol</p>
-                      <p class="sachet">(5 bottles left)</p>
-                    </section>
+                  <input type="text" name="input1" id="input1" placeholder="search medicine brand">
+                  <div class="medicine-section">
+                    <p class="close-medicine">Close</p>
+                    <div class="medicine-brand">
+                      <!-- Medicine sections will be populated here -->
+                    </div>
                   </div>
-                </div>
+              </div>
                 <div>
                   <label for="input2">Interval</label><br>
                   <input type="text" name="input2" placeholder="Enter interval">

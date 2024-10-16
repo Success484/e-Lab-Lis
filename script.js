@@ -22,6 +22,12 @@ const close_medicine = document.querySelector('.close-medicine')
         display.style.display = 'none'
     })
 
+const close_medicine_list = document.querySelector('.close-medicine-list')
+    close_medicine_list.addEventListener('click', () => {
+        const display = document.querySelector('.medicine-section-list')
+        display.style.display = 'none'
+    })
+
 let medicines = [];
 const inputField1 = document.getElementById('input1')
 
@@ -48,6 +54,7 @@ document.getElementById("input1").addEventListener("input", () => {
   );
   displayMedicines(filteredMedicines);
 });
+  
 
 function displayMedicines(data) {
   const medicineContainer = document.querySelector(".medicine-brand");
@@ -57,8 +64,12 @@ function displayMedicines(data) {
       const section = document.createElement("section");
       const p = document.createElement("p");
       p.textContent = medicine.name;
-      p.addEventListener('click', () => {
+      p.addEventListener('click', async () => {
+        document.getElementById("input2").focus()
+        document.querySelector('.medicine-section').style.display = 'none'
+        document.querySelector('.medicine-section-list').style.display = 'block'
         inputField1.value = p.textContent
+        await fetchMedicinesByCategory(medicine.id);
       })
       section.appendChild(p);
       medicineContainer.appendChild(section);
@@ -69,3 +80,38 @@ function displayMedicines(data) {
     medicineContainer.appendChild(noResult);
   }
 }
+
+
+const fetchMedicinesByCategory = async (categoryId) => {
+    try {
+      const response = await fetch(`https://cliniqueplushealthcare.com.ng/prescriptions/get_drug_class_by_id/${categoryId}`);
+      const medicines = await response.json();
+      const reversedMedicines = medicines.reverse(); 
+      if (reversedMedicines && Array.isArray(reversedMedicines)) {
+        displaySecondMedicines(reversedMedicines); 
+      } else {
+        console.error('No valid medicines data returned');
+      }
+    } catch (err) {
+      console.error("Error fetching medicines:", err);
+    }
+  };
+
+
+  function displaySecondMedicines(medicines) {
+    const medicineListContainer = document.querySelector(".medicine-brand-list");
+    medicineListContainer.innerHTML = ""; 
+    medicines.forEach((medicine) => {
+      const section = document.createElement("section");
+      const p = document.createElement("p");
+      p.textContent = medicine.medicine_name;
+  
+      p.addEventListener('click', () => {
+        document.getElementById('input2').value = p.textContent;
+      });
+  
+      section.appendChild(p);
+      medicineListContainer.appendChild(section);
+    });
+  }
+  

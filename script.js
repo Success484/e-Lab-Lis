@@ -30,6 +30,7 @@ const close_medicine_list = document.querySelector('.close-medicine-list')
 
 let medicines = [];
 const inputField1 = document.getElementById('input1')
+const inputField3 = document.getElementById('input3')
 
 document.getElementById("input1").addEventListener("click", async () => {
     try {
@@ -108,6 +109,8 @@ const fetchMedicinesByCategory = async (categoryId) => {
   
       p.addEventListener('click', () => {
         document.getElementById('input2').value = p.textContent;
+        document.querySelector('.medicine-section-list').style.display='none'
+        inputField3.focus()
       });
   
       section.appendChild(p);
@@ -115,4 +118,63 @@ const fetchMedicinesByCategory = async (categoryId) => {
     });
   }
   
-  
+
+  document.querySelector('.table-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const medicineBrand = document.getElementById('input1').value;
+    const medicineName = document.getElementById('input2').value;
+    const dose = document.getElementById('input3').value;
+    const frequency = document.getElementById('frequency').value;
+    const duration = document.getElementById("input4").value
+    const second_duration = document.querySelector('.second_duration').value;
+    const instructions = document.getElementById('input5').value;
+
+  const tbody = document.querySelector('.table-1-tbody');
+
+  const noDataRow = document.getElementById('no-data-row');
+
+  if (noDataRow) {
+      noDataRow.remove();
+  }
+
+  const rowCount = tbody.rows.length;
+
+  const newRow = document.createElement('tr');
+
+   newRow.innerHTML = `
+   <td class="first-td">${rowCount + 1}</td>
+   <td>
+     <section>
+       <p>${medicineName}</p>
+     </section>
+   </td>
+   <td>${medicineBrand}</td>
+   <td>${dose} - ${frequency}</td>
+   <td>${duration}/${second_duration}</td>
+   <td>${instructions}</td>
+   <td class="remove-cell"><p class="remove">Remove</p></td>
+ `;
+
+ tbody.appendChild(newRow);
+
+ document.querySelector('.table-form').reset();
+  })
+
+  document.querySelector('.table-1-tbody').addEventListener('click', function(e) {
+    if (e.target.classList.contains('remove')) {
+      e.target.closest('tr').remove();
+    }
+  });
+
+  function checkForEmptyTable() {
+    const tbody = document.querySelector('.table-1-tbody');
+    if (tbody.rows.length === 0) {
+        const noDataRow = document.createElement('tr');
+        noDataRow.id = 'no-data-row';
+        noDataRow.innerHTML = `
+        <td colspan="7" style="text-align: center; font-weight: bold; padding-bottom: 5px;">No Prescribed drug yet</td>        `;
+        tbody.appendChild(noDataRow);
+    }
+}
+document.addEventListener('DOMContentLoaded', checkForEmptyTable);

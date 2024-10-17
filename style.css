@@ -153,7 +153,7 @@
 
 .full-dashboard {
   width: 100%;
-  height: auto;
+  height: 100%;
   box-shadow: -1px 0px 6px 5px #e5e5e5;
   margin-top: 104px;
 }
@@ -257,7 +257,7 @@
 
 .table-1 {
   width: 100%;
-  height: 144px;
+  /* height: 100%; */
   border-collapse: collapse;
   color: #5b5b5b;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -401,7 +401,7 @@ form div input {
 }
 
 .table-form div:nth-child(2) input {
-  width: 250px;
+  width: 240px;
 }
 
 .table-form div:nth-child(3) input {
@@ -409,16 +409,57 @@ form div input {
 }
 
 .table-form div:nth-child(4) input {
-  width: 120px;
+  width: 110px;
 }
 
 .table-form div:nth-child(5) input {
-  width: 120px;
+  width: 45px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+  height: 30px;
+  border-radius: 5px;
+  border: 0px solid #fffbfb;
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b5b5b;
+  margin-top: 0px;
 }
 
 .table-form div:nth-child(6) input {
   width: 200px;
 }
+
+.duration {
+  height: 33px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: 1px solid #fffbfb;
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b5b5b;
+  margin-top: 1px;
+}
+
+.frequency{
+  width: 148px;
+  border: none;
+  height: 33px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  /* border: 1px solid #fffbfb; */
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b5b5b;
+  margin-top: 1px;
+}
+
+.duration select {
+  border: none;
+  outline: none;
+}
+
 
 .medicine-section {
   margin-top: 5px;
@@ -427,7 +468,7 @@ form div input {
   box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
   margin-top: 4px;
   color: #5b5b5b;
-  width: 220px;
+  width: 210px;
   border-radius: 8px;
   display: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -441,7 +482,7 @@ form div input {
   box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
   margin-top: 4px;
   color: #5b5b5b;
-  width: 250px;
+  width: 240px;
   border-radius: 8px;
   display: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -488,7 +529,7 @@ form div input {
 
 .medicine-brand-list {
   padding: 10px 0 0 10px;
-  width: 250px;
+  /* width: 240px; */
   height: 200px;
   overflow-y: scroll;
   color: #5b5b5b;
@@ -694,6 +735,10 @@ form div input {
   .table-form div:nth-child(4) input {
     width: 100%;
   }
+
+  .table-form div:nth-child(5) input {
+    width: 45px;
+  }
 }
 
 @media (max-width: 789px) {
@@ -835,6 +880,10 @@ form div input {
 
   .table-form div:nth-child(4) input {
     width: 100%;
+  }
+
+  .table-form div:nth-child(5) input {
+    width: 45px;
   }
 
   form {

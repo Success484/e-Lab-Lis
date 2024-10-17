@@ -223,68 +223,21 @@
                         <tr>
                           <th>S/N</th>
                           <th>Medicine Name</th>
-                          <th>Strength</th>
-                          <th>Interval/Duration</th>
+                          <th>Medicine Class</th>
+                          <th>Dose & Freq</th>
+                          <th>Duration</th>
                           <th>Instruction</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody class="table-1-tbody">
-                        <tr>
-                          <td class="first-td">1</td>
-                          <td>
-                            <section>
-                              <p>Tab Emzor Paracetamol 250mg</p>
-                              <p class="Arthemeter">Arthemeter</p>
-                            </section>
-                          </td>
-                          <td>250mg</td>
-                          <td>QDS/7 days</td>
-                          <td>1 Morning, one night for 7 days</td>
-                          <td class="remove-cell"><p class="remove">Remove</p></td>
-                        </tr>
-                        <tr>
-                          <td class="first-td">2</td>
-                          <td>
-                            <section>
-                              <p>Tab Emzor Paracetamol 250mg</p>
-                              <p class="Arthemeter">Arthemeter</p>
-                            </section>
-                          </td>
-                          <td>250mg</td>
-                          <td>QDS/7 days</td>
-                          <td>1 Morning, one night for 7 days</td>
-                          <td class="remove-cell"><p class="remove">Remove</p></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>
-                            <section>
-                              <p>Tab Emzor Paracetamol 250mg</p>
-                              <p class="Arthemeter">Arthemeter</p>
-                            </section>
-                          </td>
-                          <td>250mg</td>
-                          <td>QDS/7 days</td>
-                          <td>1 Morning, one night for 7 days</td>
-                          <td class="remove-cell"><p class="remove">Remove</p></td>
-                        </tr>
                       </tbody>
-                    </table>
+                    </table>                    
                   </div>                  
                 </div>             
               </div>
               <form action="" class="table-form">
                 <div class="form-div">
-                <!-- <div>
-                  <label for="input1">Search Medicine brand</label>
-                  <input type="text" name="input1" id="input1" placeholder="search medicine brand">
-                  <div class="medicine-section">
-                    <p class="close-medicine">Close</p>
-                    <div class="medicine-brand">
-=                    </div>
-                  </div>
-              </div> -->
               <div>
                 <label for="input1">Search Medicine brand</label><br>
                 <input type="text" name="input1" id="input1" placeholder="search medicine brand">
@@ -311,16 +264,27 @@
                   <input type="text" name="input3" id="input3" placeholder="Dosage">
                 </div>
                 <div>
-                  <label for="input4">Interval</label><br>
-                  <input type="text" name="input4" placeholder="Enter duration">
+                  <label for="">Interval</label><br>
+                  <!-- <input type="text" name="input4" placeholder="Enter duration"> -->
+                  <select name="frequency" id="frequency" class="frequency">
+                    <option value="" disabled selected>Select frequency</option>
+                    <option value="Q2W">Q2W - Every other week</option>
+                </select>
                 </div>
                 <div>
-                  <label for="input3">Duration</label><br>
-                  <input type="text" name="input3" id="input3" placeholder="Type">
+                  <label for="input4">Duration</label><br>
+                  <section class="duration">
+                  <input type="number" name="input4" id="input4" placeholder="Type">/
+                  <select class="second_duration" name="" id="">
+                    <option value="54">54</option>
+                    <option>20</option>
+                    <option>12</option>
+                  </select>
+                </section>
                 </div>
                 <div>
-                  <label for="input4">Instructions</label><br>
-                  <input type="text" name="input4" placeholder="Enter duration" value="Nil">
+                  <label for="input5">Instructions</label><br>
+                  <input type="text" name="input5" id="input5" placeholder="Enter duration" value="Nil">
                 </div>
               </div>
               <div class="button-div">

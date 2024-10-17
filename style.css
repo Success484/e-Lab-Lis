@@ -343,12 +343,12 @@ td.remove-cell {
 
 /* dashboard form */
 
-form {
+form .form-div {
   display: flex;
-  flex-direction: row;
-  gap: 5px;
-  padding: 0 20px 0 20px;
+  gap: 8px;
+  padding: 0 15px 0 15px;
   margin-top: 80px;
+  flex-wrap: wrap;
 }
 
 .button-div {
@@ -389,7 +389,7 @@ form div input {
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   border: 1px solid #fffbfb;
-  padding-left: 10px;
+  padding-left: 5px;
   font-size: 12px;
   font-weight: 600;
   color: #5b5b5b;
@@ -397,19 +397,27 @@ form div input {
 }
 
 .table-form div:nth-child(1) input {
-  width: 100%;
+  width: 210px;
 }
 
 .table-form div:nth-child(2) input {
-  width: 243px;
+  width: 250px;
 }
 
 .table-form div:nth-child(3) input {
-  width: 272px;
+  width: 100px;
 }
 
 .table-form div:nth-child(4) input {
-  width: 105px;
+  width: 120px;
+}
+
+.table-form div:nth-child(5) input {
+  width: 120px;
+}
+
+.table-form div:nth-child(6) input {
+  width: 200px;
 }
 
 .medicine-section {
@@ -419,7 +427,7 @@ form div input {
   box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
   margin-top: 4px;
   color: #5b5b5b;
-  width: 100%;
+  width: 220px;
   border-radius: 8px;
   display: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -433,7 +441,7 @@ form div input {
   box-shadow: 0px -2px 7px 2px rgba(0, 0, 0, 0.25);
   margin-top: 4px;
   color: #5b5b5b;
-  width: 100%;
+  width: 250px;
   border-radius: 8px;
   display: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -480,7 +488,7 @@ form div input {
 
 .medicine-brand-list {
   padding: 10px 0 0 10px;
-  width: 243px;
+  width: 250px;
   height: 200px;
   overflow-y: scroll;
   color: #5b5b5b;

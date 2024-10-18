@@ -70,9 +70,9 @@ function displayMedicines(data) {
       p.addEventListener('click', async () => {
         document.getElementById("input2").focus()
         document.querySelector('.medicine-section').style.display = 'none'
-        document.querySelector('.medicine-section-list').style.display = 'block'
         inputField1.value = p.textContent
         await fetchMedicinesByCategory(medicine.id);
+        document.querySelector('.medicine-section-list').style.display = 'block'
       })
       section.appendChild(p);
       medicineContainer.appendChild(section);
@@ -180,3 +180,11 @@ const fetchMedicinesByCategory = async (categoryId) => {
     }
 }
 document.addEventListener('DOMContentLoaded', checkForEmptyTable);
+
+document.querySelector('.done-pricribing-div').addEventListener('click', ()=>{
+    document.querySelector('.save-pricription-form').style.display='block'
+})
+
+const remarkInput = document.querySelector('.save-pricription-form').addEventListener('submit', (e)=>{
+    e.preventDefault()
+})

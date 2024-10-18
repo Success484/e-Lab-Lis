@@ -33,16 +33,18 @@ const inputField1 = document.getElementById('input1')
 const inputField3 = document.getElementById('input3')
 
 document.getElementById("input1").addEventListener("click", async () => {
+    document.querySelector('.loader').style.display = 'block';
     try {
     const display = document.querySelector('.medicine-section')
-        display.style.display = 'block'
     if (medicines.length === 0) {
-      const response = await fetch(
-        "https://cliniqueplushealthcare.com.ng/prescriptions/drug_class"
-      );
-      medicines = await response.json();
+        const response = await fetch(
+            "https://cliniqueplushealthcare.com.ng/prescriptions/drug_class"
+        );
+        medicines = await response.json();
     }
     displayMedicines(medicines);
+    display.style.display = 'block'
+    document.querySelector('.loader').style.display = 'none';
   } catch (err) {
     console.error("Error fetching data:", err);
   }

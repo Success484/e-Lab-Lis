@@ -238,20 +238,23 @@
               </div>
               <form action="" class="table-form">
                 <div class="form-div">
-              <div>
-                <label for="input1">Search Medicine brand</label><br>
-                <input type="text" name="input1" id="input1" placeholder="search medicine brand">
+                  <div>
+                  <div class="input-container">
+                    <label for="input1">Search Medicine brand</label><br>
+                    <input type="text" name="input1" id="input1" placeholder="search medicine brand" required>
+                    <div class="loader"></div>
+                </div>
                 <div class="medicine-section">
-                  <p class="close-medicine">Close</p>
-                  <div class="medicine-brand">
-                    <!-- Medicine sections will be populated here -->
-                  </div>
+                    <p class="close-medicine">Close</p>
+                    <div class="medicine-brand">
+                      <!-- Medicine sections will be populated here -->
+                    </div>
                 </div>
               </div>
 
                 <div>
                   <label for="input2">Medicine Name</label><br>
-                  <input type="text" name="input2" id="input2" placeholder="Enter interval">
+                  <input type="text" name="input2" id="input2" placeholder="Enter interval" required>
                   <div class="medicine-section-list">
                     <p class="close-medicine-list">Close</p>
                     <div class="medicine-brand-list">
@@ -261,12 +264,12 @@
                 </div>
                 <div>
                   <label for="input3">Dose</label><br>
-                  <input type="text" name="input3" id="input3" placeholder="Dosage">
+                  <input type="text" name="input3" id="input3" placeholder="Dosage" required>
                 </div>
                 <div>
                   <label for="">Interval</label><br>
                   <!-- <input type="text" name="input4" placeholder="Enter duration"> -->
-                  <select name="frequency" id="frequency" class="frequency">
+                  <select name="frequency" id="frequency" class="frequency" required>
                     <option value="" disabled selected>Select frequency</option>
                     <option value="Q2W">Q2W - Every other week</option>
                 </select>
@@ -274,9 +277,10 @@
                 <div>
                   <label for="input4">Duration</label><br>
                   <section class="duration">
-                  <input type="number" name="input4" id="input4" placeholder="Type">/
-                  <select class="second_duration" name="" id="">
-                    <option value="54">54</option>
+                  <input type="number" name="input4" id="input4" placeholder="Type" required>/
+                  <select class="second_duration" name="" id="" required>
+                    <option></option>
+                    <option>54</option>
                     <option>20</option>
                     <option>12</option>
                   </select>
@@ -284,7 +288,7 @@
                 </div>
                 <div>
                   <label for="input5">Instructions</label><br>
-                  <input type="text" name="input5" id="input5" placeholder="Enter duration" value="Nil">
+                  <input type="text" name="input5" id="input5" placeholder="Enter duration" value="Nil" required>
                 </div>
               </div>
               <div class="button-div">

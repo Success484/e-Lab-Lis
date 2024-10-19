@@ -349,7 +349,6 @@ td.remove-cell {
   cursor: pointer;
 }
 
-
 .save-pricription-form {
   display: none;
   margin: 0;
@@ -387,7 +386,7 @@ td.remove-cell {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.done-pricribing-div form button:hover{
+.done-pricribing-div form button:hover {
   background-color: #cb6161;
 }
 

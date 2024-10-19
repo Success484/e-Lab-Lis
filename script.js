@@ -5,6 +5,7 @@ function toggle_sidebar() {
   function handleSidebar() {
     const sidebar = document.querySelector(".side-nav");
   
+<<<<<<< HEAD
     if (window.innerWidth >= 1221) {
       sidebar.classList.add("side");
     } else {
@@ -20,6 +21,23 @@ function toggle_sidebar() {
       close_medicine.addEventListener('click', () => {
           const display = document.querySelector('.medicine-section')
           display.style.display = 'none'
+=======
+
+function displayMedicines(data) {
+  const medicineContainer = document.querySelector(".medicine-brand");
+  medicineContainer.innerHTML = "";
+  if (data.length > 0) {
+    data.forEach((medicine) => {
+      const section = document.createElement("section");
+      const p = document.createElement("p");
+      p.textContent = medicine.name;
+      p.addEventListener('click', async () => {
+        document.getElementById("input2").focus()
+        document.querySelector('.medicine-section').style.display = 'none'
+        inputField1.value = p.textContent
+        await fetchMedicinesByCategory(medicine.id);
+        document.querySelector('.medicine-section-list').style.display = 'block'
+>>>>>>> df14d79f75e702d045850cc60c6c16be4c5c560f
       })
   
   const close_medicine_list = document.querySelector('.close-medicine-list')
@@ -82,6 +100,7 @@ function toggle_sidebar() {
       noResult.textContent = "No results found";
       medicineContainer.appendChild(noResult);
     }
+<<<<<<< HEAD
   }
   
   
@@ -188,3 +207,15 @@ function toggle_sidebar() {
   const remarkInput = document.querySelector('.save-pricription-form').addEventListener('submit', (e)=>{
       e.preventDefault()
   })
+=======
+}
+document.addEventListener('DOMContentLoaded', checkForEmptyTable);
+
+document.querySelector('.done-pricribing-div').addEventListener('click', ()=>{
+    document.querySelector('.save-pricription-form').style.display='block'
+})
+
+const remarkInput = document.querySelector('.save-pricription-form').addEventListener('submit', (e)=>{
+    e.preventDefault()
+})
+>>>>>>> df14d79f75e702d045850cc60c6c16be4c5c560f

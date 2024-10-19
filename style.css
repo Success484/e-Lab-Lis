@@ -12,8 +12,8 @@
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   height: 90px;
   padding: 0 25px 0 25px;
-  /* width: 100%; */
-  width: 1440px;
+  width: 100%;
+  /* width: 1440px; */
   background-color: #fff;
   position: fixed;
   z-index: 1;
@@ -82,7 +82,8 @@
 /* NAVBAR ENDS */
 .body-section {
   display: flex;
-  width: 1440px;
+  /* width: 1440px; */
+  width: 100%;
 }
 
 .side-nav {
@@ -160,10 +161,6 @@
 
 /* Dashboad Body */
 
-/* .body-section {
-  width: 1440px;
-} */
-
 .full-dashboard .full-dashboard-div {
   display: flex;
   color: #5b5b5b;
@@ -208,8 +205,8 @@
 .dashboard-bottom p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 900;
-  font-size: 18px;
+  font-weight: 700;
+  font-size: 16px;
   color: #5b5b5b;
   line-height: 21px;
 }
@@ -222,7 +219,7 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding: 8px 3px;
+  padding: 8px 10px;
   margin-top: 10px;
 }
 
@@ -262,10 +259,6 @@
   color: #5b5b5b;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.table-responsive {
-  overflow-x: scroll;
 }
 
 .table-1-tbody {
@@ -341,6 +334,63 @@ td.remove-cell {
   padding: 0 20px;
 }
 
+.done-pricribing-div {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+.done-pricribing-div .done-pricribing {
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 3px 7px;
+  text-align: right;
+  background-color: #9c3030;
+  color: white;
+  cursor: pointer;
+}
+
+
+.save-pricription-form {
+  display: none;
+  margin: 0;
+}
+
+.done-pricribing-div form label {
+  color: #818181;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.done-pricribing-div form input {
+  height: 33px;
+  width: 100%;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: 1px solid #fffbfb;
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5b5b5b;
+  margin-top: 1px;
+}
+
+.done-pricribing-div form button {
+  padding: 5px 8px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #9c3030;
+  font-weight: 500;
+  font-size: 13px;
+  border-radius: 3px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.done-pricribing-div form button:hover{
+  background-color: #cb6161;
+}
+
 /* dashboard form */
 
 form .form-div {
@@ -362,6 +412,7 @@ form .form-div {
   text-align: center;
   margin-top: 20px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 form button {
@@ -373,6 +424,7 @@ form button {
   position: relative;
   bottom: 3px;
   right: 2px;
+  cursor: pointer;
 }
 
 form div label {
@@ -414,10 +466,13 @@ form div input {
   display: none;
 }
 
-
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .table-form div:nth-child(1) input {
@@ -465,7 +520,7 @@ form div input {
   margin-top: 1px;
 }
 
-.frequency{
+.frequency {
   width: 148px;
   border: none;
   height: 33px;
@@ -484,7 +539,6 @@ form div input {
   outline: none;
 }
 
-
 .medicine-section {
   margin-top: 5px;
   padding: 0;
@@ -499,7 +553,7 @@ form div input {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.medicine-section-list{
+.medicine-section-list {
   margin-top: 5px;
   padding: 0;
   font-size: 12px;
@@ -530,7 +584,7 @@ form div input {
   font-size: 14px;
 }
 
-.medicine-brand{
+.medicine-brand {
   padding: 10px 0 0 10px;
   width: 100%;
   height: 200px;
@@ -538,15 +592,13 @@ form div input {
   color: #5b5b5b;
 }
 
-
-.medicine-brand section p{
+.medicine-brand section p {
   font-weight: bold;
   cursor: pointer;
   padding: 5px;
 }
 
-
-.medicine-brand section p:hover{
+.medicine-brand section p:hover {
   background-color: #e7e7e7;
   border-radius: 8px;
 }
@@ -569,14 +621,13 @@ form div input {
   font-size: 14px;
 }
 
-
-.medicine-brand-list section p{
+.medicine-brand-list section p {
   font-weight: bold;
   cursor: pointer;
   padding: 5px;
 }
 
-.medicine-brand-list section p:hover{
+.medicine-brand-list section p:hover {
   background-color: #e7e7e7;
   border-radius: 8px;
 }
@@ -690,6 +741,7 @@ form div input {
 
   .full-dashboard {
     height: 100%;
+    margin-top: 90px;
   }
 
   .side-nav li > i.fa-arrow-down {
@@ -708,7 +760,7 @@ form div input {
   }
   .side-nav {
     width: 0;
-    margin: 20px 0 0 0;
+    margin-top: 90px;
   }
 
   .dashboard-bottom p {
@@ -722,7 +774,6 @@ form div input {
   }
 
   .table-1 {
-    height: 144px;
     width: 100%;
     border-collapse: collapse;
     color: #5b5b5b;
@@ -732,11 +783,10 @@ form div input {
   }
 
   .table-responsive {
-    width: 100%;
-    overflow-x: auto;
+    overflow-x: scroll;
   }
 
-  form {
+  .table-form {
     display: flex;
     gap: 5px;
     padding: 0 20px 0 20px;
@@ -790,6 +840,7 @@ form div input {
     padding: 0;
     padding-top: 25px;
     margin-right: 0;
+    margin-top: 70px;
   }
   .hamburger-icon {
     display: flex;
@@ -857,7 +908,7 @@ form div input {
     width: 100%;
     height: 100%;
     box-shadow: -1px 0px 6px 5px #e5e5e5;
-    margin-top: 20px;
+    margin-top: 70px;
   }
 
   .info-icon {
@@ -879,6 +930,19 @@ form div input {
   .dashboard-bottom p {
     font-weight: 900;
     font-size: 12px;
+  }
+
+  .table-1 {
+    width: 100%;
+    border-collapse: collapse;
+    color: #5b5b5b;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .table-responsive {
+    overflow-x: scroll;
   }
 
   form div input {
